@@ -1,9 +1,13 @@
 package com.BistecGlobal;
 
+import java.util.List;
+
 //*******************REST SERVICES**************************
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,13 +21,19 @@ public class ControllerUser {
 	private ServicesUser serviceuser;
 	
 @GetMapping("/all")	
-	public String alluser() {
-
+	public List<UserDTO> alluser() {
+	
 //once we auto-wired we can use this injection to add interface functions 
-		return serviceuser.UserInterface();
+	return serviceuser.UserInterface();
 // here also we can add data base code to the get all users data
 //		return "All users";
 		
 	}
+@PostMapping("/add")
+public String addUser(@RequestBody UserDTO Userdata) {
+	
+	return serviceuser.saveUser(Userdata);	
+	
+}
 
 }
