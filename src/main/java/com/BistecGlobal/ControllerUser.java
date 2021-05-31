@@ -29,6 +29,8 @@ public class ControllerUser {
 //		return "All users";
 		
 	}
+
+//here i have change this @RequestBody UserDTO User-data
 @PostMapping("/add")
 public String addUser(@RequestBody UserDTO Userdata) {
 	

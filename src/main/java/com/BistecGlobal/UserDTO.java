@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 // as below the code we can create a entity with the database values
+// first we should have mention the table name,, the table name is not in the database it will create automatically 
 @Entity
 @Table (name = "user")
 public class UserDTO {
