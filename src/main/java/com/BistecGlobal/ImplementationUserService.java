@@ -31,6 +31,29 @@ public class ImplementationUserService implements ServicesUser {
 		userrepository.save(Userdata);
 		return "Data saved";
 	}
+//this method use for update the existing users 	
+	@Override
+	public String UpdateUser(UserDTO newUserData) {
+		String msg = null;
+//here we can check the user is already exist or not by getid() function use as follows
+		if(newUserData.getId() != null) {
+			
+		msg = "Data updated";	
+		}else { msg = "Error";
+		}
+		// TODO Auto-generated method stub
+		return msg;
+	}
+	
+/*	@Override
+	public UserDTO findById(Integer id) {
+		// TODO Auto-generated method stub
+		
+		return userrepository.findOne(id);
+		
+	}
+	*/
+	
 	
 	
 

@@ -12,5 +12,10 @@ public interface ServicesUser {
 	String saveUser(UserDTO Userdata);
 
 
+	String UpdateUser(UserDTO newUserData);
+
+	//UserDTO findById(Integer id);
+
+
 
 }
