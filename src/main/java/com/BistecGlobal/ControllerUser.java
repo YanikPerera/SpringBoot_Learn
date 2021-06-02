@@ -39,12 +39,20 @@ public String addUser(@RequestBody UserDTO Userdata) {
 	return serviceuser.saveUser(Userdata);	
 	
 }
+//here is the update quarry 
+//@RequestBody UserDTO newUserData we can get the data from UserDTO file 
+//The newUserData param pass should to implementation class as parameter 
 
 @PutMapping("/update")
 public String updateUser(@RequestBody UserDTO newUserData) {
 	
 	return serviceuser.UpdateUser(newUserData);
 }
+
+//this is update quarry
+//@GetMapping("/find/{id}") this @getMapping we can identify the end of the URL should 
+//be find and here can be able pass id though the link
+//@PathVariable Integer id can be identify the variable data which is pass from the id
 
 /*@GetMapping("/find/{id}")
 public UserDTO getUserById(@PathVariable Integer id) {
