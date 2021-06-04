@@ -5,6 +5,7 @@ import java.util.List;
 //*******************REST SERVICES**************************
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/user")
-public class ControllerUser {
+@ControllerAdvice
+public class ControllerUser extends RuntimeException{
 
 // dependency injection 
 // from @Autowired notation we can mention this as a injection to interface functions
@@ -45,7 +47,6 @@ public String addUser(@RequestBody UserDTO Userdata) {
 
 @PutMapping("/update")
 public String updateUser(@RequestBody UserDTO newUserData) {
-	
 	return serviceuser.UpdateUser(newUserData);
 }
 

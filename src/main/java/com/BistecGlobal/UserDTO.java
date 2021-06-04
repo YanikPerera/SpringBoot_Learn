@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.sun.istack.NotNull;
+
 // as below the code we can create a entity with the database values
 // first we should have mention the table name,, the table name is not in the database it will create automatically 
 @Entity
@@ -15,14 +17,19 @@ public class UserDTO {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@NotNull
 	@Column(name = "user_id")
 	private Integer id;
+	@NotNull
 	@Column(name = "frist_name")
 	private String firstName;
+	@NotNull
 	@Column(name = "last_name")
 	private String lastName;
+	@NotNull
 	@Column(name = "age")
 	private Integer age;
+	@NotNull
 	@Column(name = "email")
 	private String email;
 	

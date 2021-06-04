@@ -16,10 +16,10 @@ public class first {
 
 	
 // using this @GetMapping("/") notation we can identify when call localhost:8080 should call this method 
-	//@GetMapping("/")
+	@GetMapping("/")
 public String main() {
 		
-		return "Start Page";
+		return "Welcome to the secure page";
 		
 	}
 
