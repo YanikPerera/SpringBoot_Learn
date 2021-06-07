@@ -15,7 +15,7 @@ public interface ServicesUser {
 	String UpdateUser(UserDTO newUserData);
 	
 //this is the search user by ID function on the interface	
-	//UserDTO findById(Integer id);
+	//UserDTO findById(long id);
 
 
 

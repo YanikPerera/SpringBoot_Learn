@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 @ControllerAdvice
-public class ControllerUser extends RuntimeException{
+public class ControllerUser{
 
 // dependency injection 
 // from @Autowired notation we can mention this as a injection to interface functions
@@ -56,10 +56,10 @@ public String updateUser(@RequestBody UserDTO newUserData) {
 //@PathVariable Integer id can be identify the variable data which is pass from the id
 
 /*@GetMapping("/find/{id}")
-public UserDTO getUserById(@PathVariable Integer id) {
+public UserDTO getUserById(@PathVariable (value ="id")long id) {
 	
 	return serviceuser.findById(id);
 	
-}*/
-
+}
+*/
 }

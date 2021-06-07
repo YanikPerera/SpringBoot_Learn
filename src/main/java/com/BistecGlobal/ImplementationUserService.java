@@ -37,24 +37,37 @@ public class ImplementationUserService implements ServicesUser {
 		String msg = null;
 //here we can check the user is already exist or not by getid() function use as follows
 		if(newUserData.getId() != null) {
+			userrepository.save(newUserData);
+		msg = "Data updated";
+		return msg;
+		}else { 
+			throw new UserNotFoundException("Please Put the User ID"+newUserData.getId());
 			
-		msg = "Data updated";	
-		}else { msg = "Error";
 		}
 		// TODO Auto-generated method stub
-		return msg;
+		
 	}
 	
 //here we can be able to return the id of the user which is require from the link address
 	
 /*	@Override
-	public UserDTO findById(Integer id) {
+	public UserDTO findById(long id) {
+		
+		if(id==null) {
+			
+			throw new UserNotFoundException("Please Put the User ID"+id);
+			
+		}else {
+			
+			
+			return userrepository.findOne(id);
+		} 
 		// TODO Auto-generated method stub
 		
-		return userrepository.findOne(id);
 		
-	}
-	*/
+		
+	}*/
+	
 	
 	
 	

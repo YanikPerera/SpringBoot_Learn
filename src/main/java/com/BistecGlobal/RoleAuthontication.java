@@ -1,6 +1,6 @@
 package com.BistecGlobal;
 
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+/*import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
@@ -12,7 +12,7 @@ public class RoleAuthontication extends WebSecurityConfigurerAdapter {
 		http 
 		.cors().and()
 	        .csrf().disable().authorizeRequests()
-	        .antMatchers("/user").hasRole("manager")
+	        //.antMatchers("/users").hasRole("manager")
 	        .anyRequest().authenticated()
 	        .and()
 	        .formLogin();
@@ -23,4 +23,4 @@ public class RoleAuthontication extends WebSecurityConfigurerAdapter {
 	
 	
 
-}
+}*/
