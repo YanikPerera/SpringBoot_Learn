@@ -47,7 +47,7 @@ public String addUser(@RequestBody UserDTO Userdata) {
 
 @PutMapping("/update")
 public String updateUser(@RequestBody UserDTO newUserData) {
-	return serviceuser.UpdateUser(newUserData);
+	return serviceuser.UpdateUser(newUserData);	
 }
 
 //this is update quarry
